@@ -1,0 +1,165 @@
+---
+import NextJsIcon from "./icons/NextJsIcon.astro"
+import TailwindIcon from "./icons/TailwindIcon.astro"
+import JS from "./icons/JavaScriptIcon.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import Vite from "./icons/Vite.astro"
+import GithubIcon from "./icons/GithubIcon.astro";
+import LinkButton from "./LinkButton.astro"
+import Link from "./Link.astro"
+import ReactIcon from "./icons/ReactIcon.astro"
+import StyledComponents from "./icons/StyledComponents.astro"
+
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJsIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-400/30 text-black font-bold",
+    icon: JS,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-700/40 text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-sky-700/40 text-white",
+    icon: CSS,
+  },
+  Vite: {
+    name: "Vite",
+    class: "bg-purple-400/40 text-white",
+    icon: Vite,
+  },
+  React: {
+    name: "React",
+    class: "bg-sky-400/40 text-white",
+    icon: ReactIcon,
+  },
+  StyledComponets: {
+    name: "Styled Components",
+    class: "bg-purple-800/40 text-white",
+    icon: StyledComponents,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Guitar-LA",
+    description: "E-Commerce de guitarras donde el cliente podrá navegar por todo el sitio y añadir al carrito de compras los elementos que desee comprar, así como también modificarlo en el momento que desee",
+    link: "https://guitar-la-next-nmb.vercel.app/",
+    github: "https://github.com/NicoMdz/Guitar-LA-Next.git",
+    image: "../Projects/GuitarLA.png",
+    tags: [TAGS.Vite, TAGS.React, TAGS.NEXT, TAGS.CSS],
+  },
+  {
+    title: "Buscador de Bebidas",
+    description: "App Web que permite al cliente consultar los ingredientes, preparación e imágenes de sus bebidas favoritas",
+    link: "https://buscadorbebidas-nmb.netlify.app/",
+    github: "https://github.com/NicoMdz/Buscador-Bebidas.git",
+    image: "../Projects/Bebidas.png",
+    tags: [TAGS.Vite, TAGS.React, TAGS.CSS],
+  },
+  {
+    title: "Weather App",
+    description: "App Web que permite al cliente consultar el estado actual del clima en la ubicación de su preferencia, ya sea dentro o fuera del su país de origen ",
+    link: "https://weatherapp-nmb.netlify.app/",
+    github: "https://github.com/NicoMdz/Clima-App.git",
+    image: "../Projects/Clima.png",
+    tags: [TAGS.Vite, TAGS.React, TAGS.CSS],
+  },
+  {
+    title: "Cotizador de Cryptos",
+    description: "App Web que permite al cliente consultar el valor actual de una criptomoneda con respecto a la moneda de su preferencia ",
+    link: "https://cotizador-criptos-nmb.netlify.app/",
+    github: "https://github.com/NicoMdz/cotizador-criptos.git",
+    image: "../Projects/CotizadorCryptos.png",
+    tags: [TAGS.Vite, TAGS.React, TAGS.StyledComponets],
+  },
+  {
+    title: "Planificador de Gastos",
+    description: "App Web que permite al cliente administrar sus gastos en un periodo de tiempo de su elección, de manera categorizada y organizada ",
+    link: "https://control-de-gastos-nmb.netlify.app/",
+    github: "https://github.com/NicoMdz/planificador-gastos.git",
+    image: "../Projects/PlanificadorGastos.png",
+    tags: [TAGS.Vite, TAGS.React, TAGS.CSS],
+  },
+  {
+    title: "Citas React",
+    description: "App Web que permite al cliente administrar la información de sus pacientes, así como también gestionar sus datos y mantenerlos persistentes gracias a Local Storage ",
+    link: "https://citas-react-nmdz.netlify.app/",
+    github: "https://github.com/NicoMdz/citas-react.git",
+    image: "../Projects/Citas-React.png",
+    tags: [TAGS.Vite, TAGS.React, TAGS.TAILWIND],
+  },
+  {
+    title: "Encriptador de Texto",
+    description: "Encriptador de texto de interfaz sencilla que permite al usuario encriptar y desencriptar palabras u oraciones para enviar algún mensaje secreto, todo mediente una pequeña lógica en JS",
+    link: "https://nicomdz.github.io/Sprint-01-Encriptador-de-Texto/",
+    github: "https://github.com/NicoMdz/Sprint-01-Encriptador-de-Texto.git",
+    image: "../Projects/Encriptador.png",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, image, description, tags, link, github }) => (
+  <article class="flex flex-col items-center space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 mb-5">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt={`Preview Proyecto: ${title}`} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-white dark:text-gray-100 ">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-white text-justify dark:text-gray-400">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GithubIcon class="size-6" />
+              Code
+              
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+    </div>
+  </div>
+</article>
+  ))
+}

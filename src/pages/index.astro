@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import Mailicon from "../components/icons/Mailicon.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCaseIcon from "../components/icons/BriefCaseIcon.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
+import SobreMi from "../components/SobreMi.astro"
+import UserCheckIcon from "../components/icons/UserCheckIcon.astro"
+import TechStackIcon from "../components/icons/TechStackIcon.astro";
+import TechStack from "../components/TechStack.astro"
+
+---
+
+<Layout
+  title="Nicolás' Portfolio"
+  description="Portafolio de Nicolás Méndez Brito - Desarrolldor y Programador Web"
+>
+  <main class="px-4">
+    <SectionContainer class="flex flex-col gap-5 items-center py-44 pb-24" id="inicio">
+      <div class="w-full flex gap-5 items-center justify-center">
+        <img
+          src="https://avatars.githubusercontent.com/u/133805622?v=4"
+          alt="Nicos Pic"
+          class="rounded-full size-32"
+        />
+        <div>
+          <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4  pb-6 lg:pb-4">
+            
+              <a
+              href="https://www.linkedin.com/in/nicol%C3%A1s-m%C3%A9ndez-brito/"
+              target="_blank"
+              rel="noopener"
+              class="flex justify-center items-center"
+              ><div class="flex justify-center items-center">
+                <Badge>Disponible para trabajar</Badge>
+              </div></a
+            >
+          </h1>
+          <h2 class="text-lg lg:text-xl text-wrap opacity-80 text-justify max-w-[550px]">
+            +1 año de experiencia. <span class="text-yellow-400 font-bold"
+              >Jr. Front-End Developer</span
+            > de origen <span class="text-green-700 font-bold">Me</span><span
+              class="font-bold">xi</span
+            ><span class="text-red-700 font-bold">cano</span> 🌮 con el objetivo
+            de convertirse en Full-Stack Developer. Siempre aprendiendo 🤓
+          </h2>
+        </div>
+      </div>
+      <div class="">
+        <nav class="flex gap-2 flex-wrap">
+          <SocialPill
+            href="https://www.linkedin.com/in/nicol%C3%A1s-m%C3%A9ndez-brito/"
+          >
+            <Linkedin class="size-4 lg:size-6" />LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/NicoMdz">
+            <GithubIcon class="size-4 lg:size-6" />GitHub
+          </SocialPill>
+          <SocialPill href="mailto:nick.mdz.b@gmail.com">
+            <Mailicon class="size-4 lg:size-6" />¡Contáctame!
+          </SocialPill>
+        </nav>
+      </div>
+    </SectionContainer>
+
+	<SectionContainer id="sobre-mi" class=" mb-10">
+    <h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-6"><UserCheckIcon class="size-7"/>Sobre Mí</h2>
+		<SobreMi />
+	</SectionContainer>
+
+	<SectionContainer id="experiencia" class="mb-10">
+    <h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-6"><BriefCaseIcon class="size-7"/>Experiencia Laboral</h2>
+		<Experience />
+	</SectionContainer>
+
+  <SectionContainer id="proyectos" class="mb-10">
+    <h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-6"><CodeIcon class="size-7"/>Proyectos</h2>
+		<Projects />
+	</SectionContainer>
+
+  <SectionContainer id="tech-stack">
+    <h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-6"><TechStackIcon class="size-7"/>Tech Stack</h2>
+		<TechStack />
+	</SectionContainer>
+
+</main>
+</Layout>
+
