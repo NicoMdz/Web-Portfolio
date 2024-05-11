@@ -7,7 +7,7 @@ export default function Header() {
     animation: "nav-shadown 1s linear both",
     animationTimeline: "scroll()",
     animationRange: "0 100px",
-  }} class="flex px-3 font-medium rounded-full text-white  justify-center items-center gap-x-4 shadow-lg ring-1 backdrop-blur  bg-white/50 ring-white/10">
+  }} className="flex px-3 font-medium rounded-full text-white  justify-center items-center gap-x-4 shadow-lg ring-1 backdrop-blur  bg-white/50 ring-white/10">
     <a href="#inicio">Inicio</a>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#experiencia">Experiencia</a>

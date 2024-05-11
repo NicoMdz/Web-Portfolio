@@ -6,6 +6,7 @@ import HTML from "./icons/HTML.astro"
 import CSS from "./icons/CSS.astro"
 import Vite from "./icons/Vite.astro"
 import GithubIcon from "./icons/GithubIcon.astro";
+import TypeScriptIcon from "./icons/TypeScriptIcon.astro"
 import LinkButton from "./LinkButton.astro"
 import Link from "./Link.astro"
 import ReactIcon from "./icons/ReactIcon.astro"
@@ -20,13 +21,18 @@ const TAGS = {
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    class: "bg-blue-400/30 text-white",
     icon: TailwindIcon,
   },
   JAVASCRIPT: {
     name: "JavaScript",
     class: "bg-yellow-400/30 text-white",
     icon: JS,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#3178c6]/50 text-white",
+    icon: TypeScriptIcon,
   },
   HTML: {
     name: "HTML",
@@ -49,7 +55,7 @@ const TAGS = {
     icon: ReactIcon,
   },
   StyledComponets: {
-    name: "Styled Components",
+    name: "Styled Comp",
     class: "bg-purple-800/40 text-white",
     icon: StyledComponents,
   },
@@ -62,7 +68,15 @@ const PROJECTS = [
     link: "https://guitar-la-next-nmb.vercel.app/",
     github: "https://github.com/NicoMdz/Guitar-LA-Next.git",
     image: "../Projects/GuitarLA.png",
-    tags: [TAGS.Vite, TAGS.React, TAGS.NEXT, TAGS.CSS],
+    tags: [TAGS.Vite, TAGS.React, TAGS.NEXT, TAGS.JAVASCRIPT, TAGS.CSS],
+  },
+  {
+    title: "Contador de Calorias",
+    description: "App Web que permite al cliente llevar un registro de su consumo de calórico durante un periodo de tiempo elegido por su preferencia",
+    link: "https://calorie-tracker-nmb.netlify.app/",
+    github: "https://github.com/NicoMdz/Calorie_Tracker_.git",
+    image: "../Projects/CalorieTracker.png",
+    tags: [TAGS.Vite, TAGS.React, TAGS.TYPESCRIPT, TAGS.TAILWIND],
   },
   {
     title: "Buscador de Bebidas",
@@ -70,7 +84,7 @@ const PROJECTS = [
     link: "https://buscadorbebidas-nmb.netlify.app/",
     github: "https://github.com/NicoMdz/Buscador-Bebidas.git",
     image: "../Projects/Bebidas.png",
-    tags: [TAGS.Vite, TAGS.React, TAGS.CSS],
+    tags: [TAGS.Vite, TAGS.React, TAGS.JAVASCRIPT, TAGS.CSS],
   },
   {
     title: "Weather App",
@@ -78,7 +92,7 @@ const PROJECTS = [
     link: "https://weatherapp-nmb.netlify.app/",
     github: "https://github.com/NicoMdz/Clima-App.git",
     image: "../Projects/Clima.png",
-    tags: [TAGS.Vite, TAGS.React, TAGS.CSS],
+    tags: [TAGS.Vite, TAGS.React, TAGS.JAVASCRIPT, TAGS.CSS],
   },
   {
     title: "Cotizador de Cryptos",
@@ -86,23 +100,23 @@ const PROJECTS = [
     link: "https://cotizador-criptos-nmb.netlify.app/",
     github: "https://github.com/NicoMdz/cotizador-criptos.git",
     image: "../Projects/CotizadorCryptos.png",
-    tags: [TAGS.Vite, TAGS.React, TAGS.StyledComponets],
+    tags: [TAGS.Vite, TAGS.React, TAGS.JAVASCRIPT, TAGS.StyledComponets],
   },
   {
-    title: "Planificador de Gastos",
+    title: "Control de Gastos",
     description: "App Web que permite al cliente administrar sus gastos en un periodo de tiempo de su elección, de manera categorizada y organizada ",
     link: "https://control-de-gastos-nmb.netlify.app/",
-    github: "https://github.com/NicoMdz/planificador-gastos.git",
+    github: "https://github.com/NicoMdz/control-de-gastos.git",
     image: "../Projects/PlanificadorGastos.png",
-    tags: [TAGS.Vite, TAGS.React, TAGS.CSS],
+    tags: [TAGS.Vite, TAGS.React, TAGS.TYPESCRIPT, TAGS.CSS],
   },
   {
-    title: "Citas React",
-    description: "App Web que permite al cliente administrar la información de sus pacientes, así como también gestionar sus datos y mantenerlos persistentes gracias a Local Storage ",
-    link: "https://citas-react-nmdz.netlify.app/",
-    github: "https://github.com/NicoMdz/citas-react.git",
+    title: "Citas Admin",
+    description: "Aplicación dirigida a cualquier cliente que desee llevar una buena administración de los pacientes que recibe en su consultorio. Con esto podrá listarlos, editarlos y marcarlos como completados al finalizar su seguimiento.",
+    link: "https://citas-nmb.netlify.app/",
+    github: "https://github.com/NicoMdz/Citas-Consultorio.git",
     image: "../Projects/Citas-React.png",
-    tags: [TAGS.Vite, TAGS.React, TAGS.TAILWIND],
+    tags: [TAGS.Vite, TAGS.React, TAGS.TYPESCRIPT, TAGS.TAILWIND],
   },
   {
     title: "Encriptador de Texto",
