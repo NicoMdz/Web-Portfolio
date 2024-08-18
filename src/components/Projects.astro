@@ -13,6 +13,7 @@ import ReactIcon from "./icons/ReactIcon.astro"
 import StyledComponents from "./icons/StyledComponents.astro"
 import PostgreSQL from "./icons/PostgreSQL.astro"
 import ExpressJSIcon from "./icons/ExpressJSIcon.astro"
+import MongoDBIcon from "./icons/MongoDBIcon.astro"
 
 
 const TAGS = {
@@ -66,6 +67,11 @@ const TAGS = {
     class: "bg-cyan-800/40 text-white",
     icon: PostgreSQL,
   },
+  MongoDB: {
+    name: "MongoDB",
+    class: "bg-green-800/30 text-white",
+    icon: MongoDBIcon,
+  },
   Expressjs: {
     name: "ExpressJs",
     class: "bg-black text-white",
@@ -74,6 +80,14 @@ const TAGS = {
 };
 
 const PROJECTS = [
+  {
+    title: "UpTask",
+    description: "Aplicación de gestión de proyectos ideal para trabajo colaborativo dentro de una empresa. El usuario es capaz de crear, editar y eliminar proyectos, así como también añadirles tareas y notas. Se pueden incluir colaboradores donde cada rol tiene distintos permisos. ¡Ingresa con el usuario del README!",
+    link: "https://uptask-nmb.vercel.app/",
+    github: "https://github.com/NicoMdz/UpTask_MERN-backend.git",
+    image: "../Projects/UpTask.png",
+    tags: [TAGS.Vite, TAGS.React, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.MongoDB, TAGS.Expressjs],
+  },
   {
     title: "Administrador de Productos",
     description: "Aplicación PERN Stack dirigida a cualquier usuario que desee llevar un control y administración de los productos para su empresa. El usuario es capaz de crear, editar, actualizar, eliminar y cambiar la disponibilidad de sus productos.",
