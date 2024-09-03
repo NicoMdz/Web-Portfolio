@@ -14,6 +14,8 @@ import StyledComponents from "./icons/StyledComponents.astro"
 import PostgreSQL from "./icons/PostgreSQL.astro"
 import ExpressJSIcon from "./icons/ExpressJSIcon.astro"
 import MongoDBIcon from "./icons/MongoDBIcon.astro"
+import PrismaIcon from "./icons/PrismaIcon.astro"
+
 
 
 const TAGS = {
@@ -23,7 +25,7 @@ const TAGS = {
     icon: NextJsIcon,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     class: "bg-blue-400/30 text-white",
     icon: TailwindIcon,
   },
@@ -77,9 +79,22 @@ const TAGS = {
     class: "bg-black text-white",
     icon: ExpressJSIcon,
   },
+  Prisma: {
+    name: "Prisma",
+    class: "bg-black text-white",
+    icon: PrismaIcon,
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "Quiosco de Comida",
+    description: "Aplicación dirigida a restaurantes que deseen facilitar la manera y mejorar la agilidad en la que los clientes ordenan su comida. Así como también permite a los administradores ver en tiempo real las órdenes que se crean, cuales han sido completadas y un panel con las ordenes listas más recientes para que la clientela pueda identificar cuando su órden esté lista.",
+    link: "https://quiosco-next-nmb.vercel.app",
+    github: "https://github.com/NicoMdz/Quiosco-Next.git",
+    image: "../Projects/Quiosco.png",
+    tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.PostgreSQL, TAGS.Prisma],
+  },
   {
     title: "UpTask",
     description: "Aplicación de gestión de proyectos ideal para trabajo colaborativo dentro de una empresa. El usuario es capaz de crear, editar y eliminar proyectos, así como también añadirles tareas y notas. Se pueden incluir colaboradores donde cada rol tiene distintos permisos. ¡Ingresa con el usuario del README!",
