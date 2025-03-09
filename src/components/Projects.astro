@@ -15,6 +15,8 @@ import PostgreSQL from "./icons/PostgreSQL.astro"
 import ExpressJSIcon from "./icons/ExpressJSIcon.astro"
 import MongoDBIcon from "./icons/MongoDBIcon.astro"
 import PrismaIcon from "./icons/PrismaIcon.astro"
+import TanStackIcon from "./icons/TanStackIcon.astro"
+
 
 
 
@@ -84,9 +86,22 @@ const TAGS = {
     class: "bg-black text-white",
     icon: PrismaIcon,
   },
+  TanStack: {
+    name: "TanStack",
+    class: "text-white bg-orange-700/40",
+    icon: TanStackIcon,
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "Linktree Dupe",
+    description: "Sitio web dirigido a cualquier usuario que desee consolidar sus redes sociales en un solo lugar, ideal para creadores de contenido que buscan crecer su imagen personal.",
+    link: "https://devtree-nmb.netlify.app/",
+    github: "https://github.com/NicoMdz/devtree_frontend.git",
+    image: "../Projects/DevTree.png",
+    tags: [TAGS.React, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.MongoDB, TAGS.Expressjs, TAGS.TanStack],
+  },
   {
     title: "Quiosco de Comida",
     description: "Aplicación dirigida a restaurantes que deseen facilitar la manera y mejorar la agilidad en la que los clientes ordenan su comida. Así como también permite a los administradores ver en tiempo real las órdenes que se crean, cuales han sido completadas y un panel con las ordenes listas más recientes para que la clientela pueda identificar cuando su órden esté lista.",
